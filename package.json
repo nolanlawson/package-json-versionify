@@ -1,0 +1,12 @@
+{
+  "name": "package-json-versionify",
+  "version": "1.0.0",
+  "description": "Browserify transform to strip package.json of everything but the version",
+  "main": "index.js",
+  "keywords": [],
+  "author": "Nolan Lawson <nolan@nolanlawson.com>",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "through2": "^2.0.0"
+  }
+}
