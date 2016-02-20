@@ -1,6 +1,6 @@
 {
   "name": "package-json-versionify",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Browserify transform to strip package.json of everything but the version",
   "repository": "https://github.com/nolanlawson/package-json-versionify.git",
   "main": "index.js",
