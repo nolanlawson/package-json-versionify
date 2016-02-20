@@ -21,7 +21,9 @@ function streamToString(callback) {
 }
 
 function versionify(filename) {
-  if (!/\b(?:package.json)$/.test(filename)) return through();
+  if (!/\b(?:package.json)$/.test(filename)) {
+    return through();
+  }
   return streamToString(function (contents, next) {
     var pkg = JSON.parse(contents);
     this.push(JSON.stringify({version: pkg.version}));
