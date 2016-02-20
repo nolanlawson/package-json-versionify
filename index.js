@@ -1,5 +1,4 @@
 "use strict";
-
 var through = require('through2');
 
 /*
@@ -8,27 +7,24 @@ var through = require('through2');
  * because Node buffers are chunked based on file size.
  */
 function streamToString(callback) {
-  var str = '';
+  var contents = '';
 
   return through(
     function (chunk, enc, next) {
-      str += chunk.toString('utf8');
+      contents += chunk.toString('utf8');
       next();
     },
     function (next) { // flush function
-      callback.bind(this)(str, next);
+      callback.bind(this)(contents, next);
     }
   );
 }
 
 function versionify(filename) {
-
-  if (!/\b(?:package.json)$/.test(filename)) {
-    return through();
-  }
+  if (!/\b(?:package.json)$/.test(filename)) return through();
   return streamToString(function (contents, next) {
-    var json = JSON.parse(contents);
-    this.push("{\"version\":\"" + json.version + "\"}");
+    var pkg = JSON.parse(contents);
+    this.push(JSON.stringify({version: pkg.version}));
     next();
   });
 }
