@@ -19,5 +19,6 @@
     "derequire": "^2.0.3",
     "mocha": "2.4.5",
     "stream-to-promise": "1.1.0"
-  }
+  },
+  "files": []
 }
