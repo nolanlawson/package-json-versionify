@@ -11,7 +11,7 @@
     "test": "mocha test/test.js"
   },
   "dependencies": {
-    "through2": "^2.0.0"
+    "browserify-package-json": "^1.0.0"
   },
   "devDependencies": {
     "assert": "1.3.0",
