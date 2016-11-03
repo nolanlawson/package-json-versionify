@@ -1,4 +1,4 @@
-package-json-versionify
+package-json-versionify [![Build Status](https://travis-ci.org/nolanlawson/package-json-versionify.svg?branch=master)](https://travis-ci.org/nolanlawson/package-json-versionify)
 =====
 
 Browserify transform to strip everything from `package.json` except for
