@@ -7,7 +7,7 @@ the `"version"` field.
 Installation
 ----
 
-    npm install --save package-json-versionify
+    npm install --save-dev package-json-versionify
 
 Description
 ----
